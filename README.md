@@ -8,6 +8,7 @@ Enum util is a util class which will allow one to extract the enum instance out 
 
 Ex:
 ```markdown
+
 import com.hs.easyTools.datatype.EnumUtil;
 
 public class Test {
@@ -32,7 +33,7 @@ public class Test {
     TrueOrFalse FALSE = new EnumUtil<>(TrueOrFalse.class).getValue("FALSE");
   }
 }
-
+```
 
 ### Support or Contact
 Please contribute to this project by pushing more such utilitites :)
