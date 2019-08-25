@@ -1,37 +1,40 @@
-## Welcome to GitHub Pages
+## Welcome to easyTools
 
-You can use the [editor on GitHub](https://github.com/j-himanshu/easyTools/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+EasyTools is a simple project to add simple looking - pieces of code, code which is more or less a utility and is missing from lot of other utility Projects (Such as Apache commons)
 
 ### Markdown
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+Sample tools: EnumUtil
 
+Enum util is a util class which will allow one to extract the enum instance out of the corresponding string (name() or toString()).
+
+Ex:
 ```markdown
-Syntax highlighted code block
+import com.hs.easyTools.datatype.EnumUtil;
 
-# Header 1
-## Header 2
-### Header 3
+public class Test {
 
-- Bulleted
-- List
+  enum TrueOrFalse {
+    TRUE("true"), FALSE("false");
+    
+    private final String t;
+    
+    TrueOrFalse(String t) {
+      this.t = t;
+    }
+    
+    @Override
+    public String toString() {
+      return t;
+    }
+  }
+  
+  public static void main(String args[]) {
+    TrueOrFalse TRUE = EnumUtil.getValue(TrueOrFalse.class, "true");
+    TrueOrFalse FALSE = new EnumUtil<>(TrueOrFalse.class).getValue("FALSE");
+  }
+}
 
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/j-himanshu/easyTools/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
 
 ### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+Please contribute to this project by pushing more such utilitites :)
