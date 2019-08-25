@@ -2,9 +2,7 @@
 
 EasyTools is a simple project to add simple looking - pieces of code, code which is more or less a utility and is missing from lot of other utility Projects (Such as Apache commons)
 
-### Markdown
-
-Sample tools: EnumUtil
+### Sample tools: EnumUtil
 
 Enum util is a util class which will allow one to extract the enum instance out of the corresponding string (name() or toString()).
 
